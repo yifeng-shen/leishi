@@ -5,6 +5,7 @@ using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.Configuration;
 using System;
 using System.Configuration;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
@@ -26,6 +27,7 @@ namespace leishi.Web
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
+            log4net.Config.XmlConfigurator.Configure(new FileInfo(Server.MapPath("~/Web.config")));
             this.ConfigureIocContainer(GlobalConfiguration.Configuration);
         }
 
@@ -41,18 +43,7 @@ namespace leishi.Web
             httpContext.Response.TrySkipIisCustomErrors = true;
 
             var errorInfo = new HandleErrorInfo(ex, HttpContextUtility.CurrentController, HttpContextUtility.CurrentAction);
-
-            //var message = Logger.BuildMessage(
-            //   "Web Application Error Controller:{0}, Action:{1}. Message: {2}, InnerException: {3}, StackTrace: {4}",
-            //   errorInfo.ControllerName,
-            //   errorInfo.ActionName,
-            //       errorInfo.Exception.Message,
-            //       errorInfo.Exception.InnerException,
-            //       errorInfo.Exception.StackTrace);
-            //Logger.Instance.LogError(Dqms.Common.Logging.Events.WebApplicationError, message);
-
-            // Format and add log here.
-
+            
             var routeData = new RouteData();
             routeData.Values["controller"] = "Error";
             routeData.Values["action"] = "Index";

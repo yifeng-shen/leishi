@@ -1,6 +1,6 @@
 ﻿namespace leishi.Web.Core
 {
-    using ServiceProvider.Common;
+    using leishi.Common;
     using System.Web.Mvc;
 
     public class SecureStringModelBinder : DefaultModelBinder

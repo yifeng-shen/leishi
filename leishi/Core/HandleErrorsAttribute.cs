@@ -3,7 +3,7 @@ using System.Web.Mvc;
 
 namespace leishi.Web.Core
 {
-    public class HandleErrorsAttribute : HandleErrorAttribute
+    public class HandleAjaxErrorsAttribute : HandleErrorAttribute
     {
         /// <summary>
         /// 特殊处理异步请求异常
@@ -13,7 +13,7 @@ namespace leishi.Web.Core
         {
             if (filterContext.HttpContext.Request.Headers["X-Requested-With"] != "XMLHttpRequest")
             {
-                base.OnException(filterContext);
+                throw filterContext.Exception;
             }
 
             var resetSession = filterContext.Exception is HttpAntiForgeryException;

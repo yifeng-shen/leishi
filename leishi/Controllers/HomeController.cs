@@ -3,9 +3,9 @@ using System.Web.Mvc;
 
 namespace leishi.Web.Controllers
 {
-    public class ErrorController : CoreController
+    public class HomeController : CoreController
     {
-        // GET: Error
+        // GET: Home
         public ActionResult Index()
         {
             return View();

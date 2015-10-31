@@ -61,6 +61,15 @@ namespace leishi.Web.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to admin.
+        /// </summary>
+        internal static string AdminLoginQueryStringKey {
+            get {
+                return ResourceManager.GetString("AdminLoginQueryStringKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 您的会话/登陆已过期，请刷新当前页面。.
         /// </summary>
         internal static string AjaxRequestResetMessage {

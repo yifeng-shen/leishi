@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "leishi", "leishi\leishi.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceProvider", "ServiceProvider\ServiceProvider.csproj", "{BC05CEF6-7B46-4877-A551-D6AC58EB1EFF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataModel", "DataModel\DataModel.csproj", "{E4ABAACB-2C4E-48BE-BB12-BF560B6A965A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{0918D139-F097-4B5A-9D63-F320104D8E00}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{BC05CEF6-7B46-4877-A551-D6AC58EB1EFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC05CEF6-7B46-4877-A551-D6AC58EB1EFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC05CEF6-7B46-4877-A551-D6AC58EB1EFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4ABAACB-2C4E-48BE-BB12-BF560B6A965A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4ABAACB-2C4E-48BE-BB12-BF560B6A965A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4ABAACB-2C4E-48BE-BB12-BF560B6A965A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4ABAACB-2C4E-48BE-BB12-BF560B6A965A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0918D139-F097-4B5A-9D63-F320104D8E00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0918D139-F097-4B5A-9D63-F320104D8E00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0918D139-F097-4B5A-9D63-F320104D8E00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0918D139-F097-4B5A-9D63-F320104D8E00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

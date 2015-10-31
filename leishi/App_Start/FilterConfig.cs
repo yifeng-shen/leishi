@@ -7,7 +7,7 @@ namespace leishi.Web
     {
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
-            filters.Add(new HandleErrorsAttribute());
+            filters.Add(new HandleAjaxErrorsAttribute());
         }
     }
 }
