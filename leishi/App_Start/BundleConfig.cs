@@ -1,6 +1,6 @@
 ﻿using System.Web.Optimization;
 
-namespace leishi
+namespace leishi.Web
 {
     public class BundleConfig
     {

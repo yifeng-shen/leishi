@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>leishi</RootNamespace>
-    <AssemblyName>leishi</AssemblyName>
+    <RootNamespace>leishi.Web</RootNamespace>
+    <AssemblyName>leishi.Web</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -152,9 +152,22 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Common\Extensions.cs" />
     <Compile Include="Common\HttpContextUtility.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Core\Factories\ModelBinderFactory.cs" />
+    <Compile Include="Core\Factories\ModelFactory.cs" />
+    <Compile Include="Core\Factories\ServiceFactory.cs" />
+    <Compile Include="Core\Factories\UnityControllerFactory.cs" />
+    <Compile Include="Core\Factories\UnityDependencyResolver.cs" />
+    <Compile Include="Core\Factories\UnityDependencyScope.cs" />
+    <Compile Include="Core\Factories\UnityFilterAttributeFilterProvider.cs" />
     <Compile Include="Core\HandleErrorsAttribute.cs" />
+    <Compile Include="Core\ModelBinders\DQDefaultModelBinder.cs" />
+    <Compile Include="Core\ModelBinders\IPropertyBinder.cs" />
+    <Compile Include="Core\ModelBinders\PropertyBinderAttribute.cs" />
+    <Compile Include="Core\ModelBinders\SecureStringModelBinder.cs" />
+    <Compile Include="Core\ModelBinders\TimeSpanPropertyBinder.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -186,6 +199,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Common.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ServiceProvider\ServiceProvider.csproj">
+      <Project>{bc05cef6-7b46-4877-a551-d6ac58eb1eff}</Project>
+      <Name>ServiceProvider</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

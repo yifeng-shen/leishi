@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace leishi.Resources {
+namespace leishi.Web.Resources {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace leishi.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("leishi.Resources.Common", typeof(Common).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("leishi.Web.Resources.Common", typeof(Common).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

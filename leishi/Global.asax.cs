@@ -1,16 +1,18 @@
-﻿using leishi.Common;
-using leishi.Controllers;
+﻿using leishi.Web.Common;
+using leishi.Web.Controllers;
+using leishi.Web.Core;
 using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.Configuration;
 using System;
 using System.Configuration;
+using System.Linq;
 using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 
-namespace leishi
+namespace leishi.Web
 {
     public class MvcApplication : HttpApplication
     {
@@ -68,10 +70,8 @@ namespace leishi
 
             var section = (UnityConfigurationSection)ConfigurationManager.GetSection("unity");
             this.container.LoadConfiguration(section, "UnityContainer");
-
-            this.container.RegisterType<IMetadataUtility, CachedMetadataUtility>(new TransientLifetimeManager(), new InjectionConstructor());
-
-            this.container.RegisterInstance(this.container.Resolve<CheckModelClient>(), new ContainerControlledLifetimeManager());
+            
+            // this.container.RegisterInstance(this.container.Resolve<>(), new ContainerControlledLifetimeManager());
 
             ModelBinderProviders.BinderProviders.Clear();
             ModelBinderProviders.BinderProviders.Add(new ModelBinderFactory(this.container));

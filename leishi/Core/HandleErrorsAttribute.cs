@@ -1,12 +1,12 @@
 ﻿using System.Net;
 using System.Web.Mvc;
 
-namespace leishi.Core
+namespace leishi.Web.Core
 {
     public class HandleErrorsAttribute : HandleErrorAttribute
     {
         /// <summary>
-        /// 处理异步请求
+        /// 特殊处理异步请求异常
         /// </summary>
         /// <param name="filterContext"></param>
         public override void OnException(ExceptionContext filterContext)

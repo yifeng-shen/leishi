@@ -1,4 +1,4 @@
-﻿namespace leishi.Common
+﻿namespace leishi.Web.Common
 {
     using System;
     using System.Globalization;

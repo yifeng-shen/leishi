@@ -1,7 +1,7 @@
-﻿using leishi.Core;
+﻿using leishi.Web.Core;
 using System.Web.Mvc;
 
-namespace leishi
+namespace leishi.Web
 {
     internal static class FilterConfig
     {
