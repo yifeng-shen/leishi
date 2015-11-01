@@ -8,8 +8,8 @@ namespace leishi.Common.Model
 {
     public enum UserTypes
     {
-        SuperAdmin = 0,
+        DefaultUser = 0,
         Admin = 1,
-        DefaultUser = 2
+        SuperAdmin = 2
     }
 }
